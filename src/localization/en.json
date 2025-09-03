@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "Anesthesia Management"
+  },
+  "menu": {
+    "start": "Start",
+    "settings": "Settings",
+    "about": "About"
+  },
+  "patient": {
+    "title": "Patient Information",
+    "age": "Age (years)",
+    "sex": "Sex",
+    "male": "Male",
+    "female": "Female",
+    "weight": "Weight (kg)",
+    "hematocrit": "Hematocrit (%)",
+    "hemoglobin": "Hemoglobin (g/dL)",
+    "submit": "Continue",
+    "validation": {
+      "ageRequired": "Age is required",
+      "weightRequired": "Weight is required",
+      "hematocritRequired": "Hematocrit or Hemoglobin is required"
+    }
+  },
+  "workflow": {
+    "premedication": "Premedication",
+    "induction": "Induction",
+    "maintenance": "Maintenance",
+    "recovery": "Recovery",
+    "emergency": "Emergency"
+  },
+  "premedication": {
+    "title": "Premedication",
+    "drugs": "Medications",
+    "serumTherapy": "Serum Therapy",
+    "serumType": "Serum Type",
+    "dropsPerMinute": "Drops per minute",
+    "normalSaline": "Normal Saline (0.9%)",
+    "ringerLactate": "Ringer's Lactate",
+    "dextrose5": "5% Dextrose"
+  },
+  "induction": {
+    "title": "Induction",
+    "tiva": "TIVA (Total Intravenous Anesthesia)",
+    "spinal": "Spinal Anesthesia",
+    "general": "General Anesthesia",
+    "equipment": "Required Equipment",
+    "endotrachealTube": "Endotracheal Tube Size",
+    "laryngoscope": "Laryngoscope Blade"
+  },
+  "maintenance": {
+    "title": "Maintenance",
+    "bloodLoss": "Blood Loss (mL)",
+    "transfusionNeeded": "Blood Transfusion Needed",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "recovery": {
+    "title": "Recovery",
+    "monitoring": "Post-operative Monitoring",
+    "vitals": "Vital Signs",
+    "consciousness": "Level of Consciousness"
+  },
+  "emergency": {
+    "title": "Emergency Protocols",
+    "laryngospasm": "Laryngospasm",
+    "cardiacArrest": "Cardiac Arrest",
+    "anaphylaxis": "Anaphylaxis",
+    "malignantHyperthermia": "Malignant Hyperthermia"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "english": "English",
+    "farsi": "فارسی"
+  },
+  "about": {
+    "title": "About",
+    "description": "Anesthesia Management App for healthcare professionals",
+    "version": "Version 1.0.0"
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel",
+    "dose": "Dose",
+    "mg": "mg",
+    "ml": "mL",
+    "kg": "kg",
+    "mcg": "mcg"
+  }
+}
+

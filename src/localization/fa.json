@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "مدیریت بیهوشی"
+  },
+  "menu": {
+    "start": "شروع",
+    "settings": "تنظیمات",
+    "about": "درباره"
+  },
+  "patient": {
+    "title": "اطلاعات بیمار",
+    "age": "سن (سال)",
+    "sex": "جنسیت",
+    "male": "مرد",
+    "female": "زن",
+    "weight": "وزن (کیلوگرم)",
+    "hematocrit": "هماتوکریت (%)",
+    "hemoglobin": "هموگلوبین (گرم/دسی‌لیتر)",
+    "submit": "ادامه",
+    "validation": {
+      "ageRequired": "سن الزامی است",
+      "weightRequired": "وزن الزامی است",
+      "hematocritRequired": "هماتوکریت یا هموگلوبین الزامی است"
+    }
+  },
+  "workflow": {
+    "premedication": "پیش‌دارو",
+    "induction": "القاء",
+    "maintenance": "نگهداری",
+    "recovery": "بهبودی",
+    "emergency": "اورژانس"
+  },
+  "premedication": {
+    "title": "پیش‌دارو",
+    "drugs": "داروها",
+    "serumTherapy": "سرم‌درمانی",
+    "serumType": "نوع سرم",
+    "dropsPerMinute": "قطره در دقیقه",
+    "normalSaline": "سرم فیزیولوژی (۰.۹%)",
+    "ringerLactate": "رینگر لاکتات",
+    "dextrose5": "دکستروز ۵%"
+  },
+  "induction": {
+    "title": "القاء",
+    "tiva": "TIVA (بیهوشی کامل وریدی)",
+    "spinal": "بیهوشی نخاعی",
+    "general": "بیهوشی عمومی",
+    "equipment": "تجهیزات مورد نیاز",
+    "endotrachealTube": "اندازه لوله تراشه",
+    "laryngoscope": "تیغه لارنگوسکوپ"
+  },
+  "maintenance": {
+    "title": "نگهداری",
+    "bloodLoss": "از دست دادن خون (میلی‌لیتر)",
+    "transfusionNeeded": "نیاز به تزریق خون",
+    "yes": "بله",
+    "no": "خیر"
+  },
+  "recovery": {
+    "title": "بهبودی",
+    "monitoring": "نظارت پس از عمل",
+    "vitals": "علائم حیاتی",
+    "consciousness": "سطح هوشیاری"
+  },
+  "emergency": {
+    "title": "پروتکل‌های اورژانس",
+    "laryngospasm": "اسپاسم حنجره",
+    "cardiacArrest": "ایست قلبی",
+    "anaphylaxis": "آنافیلاکسی",
+    "malignantHyperthermia": "هایپرترمی بدخیم"
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "language": "زبان",
+    "english": "English",
+    "farsi": "فارسی"
+  },
+  "about": {
+    "title": "درباره",
+    "description": "اپلیکیشن مدیریت بیهوشی برای متخصصان بهداشت",
+    "version": "نسخه ۱.۰.۰"
+  },
+  "common": {
+    "back": "بازگشت",
+    "next": "بعدی",
+    "save": "ذخیره",
+    "cancel": "لغو",
+    "dose": "دوز",
+    "mg": "میلی‌گرم",
+    "ml": "میلی‌لیتر",
+    "kg": "کیلوگرم",
+    "mcg": "میکروگرم"
+  }
+}
+
