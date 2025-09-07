@@ -21,7 +21,7 @@ const WorkflowScreen = ({ navigation }) => {
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
-      title: 'Anesthesia Workflow',
+      title: t("workflow.title"),
     });
   }, [navigation]);
 
@@ -68,8 +68,8 @@ const WorkflowScreen = ({ navigation }) => {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* Patient Summary */}
         <View style={styles.patientSummary}>
-          <Text style={[styles.summaryTitle, isRTL && styles.rtlText]}>
-            Patient Information
+          <Text style={[styles.summaryTitle]}>
+            {t("workflow.patientInfo")}
           </Text>
           <View style={styles.summaryRow}>
             <Text style={[styles.summaryLabel, isRTL && styles.rtlText]}>
@@ -119,8 +119,8 @@ const WorkflowScreen = ({ navigation }) => {
 
         {/* Workflow Options */}
         <View style={styles.workflowContainer}>
-          <Text style={[styles.workflowTitle, isRTL && styles.rtlText]}>
-            Select Workflow Section
+          <Text style={[styles.workflowTitle]}>
+            {t("workflow.workflowSelection")}
           </Text>
           
           {workflowItems.map((item) => (
@@ -135,7 +135,8 @@ const WorkflowScreen = ({ navigation }) => {
             >
               <View style={styles.workflowButtonContent}>
                 <Text style={styles.workflowIcon}>{item.icon}</Text>
-                <Text style={[styles.workflowButtonText, isRTL && styles.rtlText]}>
+                <Text style={styles.workflowIcon}> </Text>
+                <Text style={[styles.workflowButtonText]}>
                   {item.title}
                 </Text>
               </View>

@@ -17,6 +17,7 @@
     "hematocrit": "Hematocrit (%)",
     "hemoglobin": "Hemoglobin (g/dL)",
     "submit": "Continue",
+    "clearForm": "Reset Form",
     "validation": {
       "ageRequired": "Age is required",
       "weightRequired": "Weight is required",
@@ -28,7 +29,10 @@
     "induction": "Induction",
     "maintenance": "Maintenance",
     "recovery": "Recovery",
-    "emergency": "Emergency"
+    "emergency": "Emergency",
+    "patientInfo": "Patient Information",
+    "workflowSelection": "Select Workflow Section",
+    "title": "Anesthesia Workflow"
   },
   "premedication": {
     "title": "Premedication",

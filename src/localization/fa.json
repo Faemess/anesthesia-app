@@ -17,10 +17,12 @@
     "hematocrit": "هماتوکریت (%)",
     "hemoglobin": "هموگلوبین (گرم/دسی‌لیتر)",
     "submit": "ادامه",
+    "clearForm": "پاک کردن",
     "validation": {
       "ageRequired": "سن الزامی است",
       "weightRequired": "وزن الزامی است",
-      "hematocritRequired": "هماتوکریت یا هموگلوبین الزامی است"
+      "hematocritRequired": "هماتوکریت یا هموگلوبین الزامی است",
+      "sexRequired": "جنسیت الزامی است"
     }
   },
   "workflow": {
@@ -28,7 +30,10 @@
     "induction": "القاء",
     "maintenance": "نگهداری",
     "recovery": "بهبودی",
-    "emergency": "اورژانس"
+    "emergency": "اورژانس",
+    "patientInfo": "اطلاعات بیمار",
+    "workflowSelection": "روندهای کاری ",
+    "title": "روندهای بیهوشی"
   },
   "premedication": {
     "title": "پیش‌دارو",

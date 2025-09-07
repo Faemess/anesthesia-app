@@ -58,7 +58,7 @@ const PreMedicationScreen = ({ navigation }) => {
   const DrugCard = ({ drug }) => (
     <View style={styles.drugCard}>
       <View style={styles.drugHeader}>
-        <Text style={[styles.drugName, isRTL && styles.rtlText]}>
+        <Text style={[styles.drugName]}>
           {drug.name}
         </Text>
         <View style={styles.doseContainer}>

@@ -21,11 +21,11 @@ const PatientFormScreen = ({ navigation }) => {
   const { updatePatientData } = usePatient();
 
   const [formData, setFormData] = useState({
-    age: '',
-    sex: '',
-    weight: '',
-    hematocrit: '',
-    hemoglobin: '',
+    age: '25',
+    sex: 'male',
+    weight: '70',
+    hematocrit: '33',
+    hemoglobin: '13.5',
   });
 
   const [errors, setErrors] = useState({});
@@ -91,6 +91,18 @@ const PatientFormScreen = ({ navigation }) => {
     }
   };
 
+  // Clear form function to reset all input fields
+  const clearForm = () => {
+    setFormData({
+      age: '',
+      sex: '',
+      weight: '',
+      hematocrit: '',
+      hemoglobin: '',
+    });
+    setErrors({});
+  };
+
   return (
     <SafeAreaView style={[styles.container, isRTL && styles.rtl]}>
       <KeyboardAvoidingView
@@ -101,7 +113,7 @@ const PatientFormScreen = ({ navigation }) => {
           <View style={styles.form}>
             {/* Age Input */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, isRTL && styles.rtlText]}>
+              <Text style={[styles.label]}>
                 {t('patient.age')}
               </Text>
               <TextInput
@@ -120,7 +132,7 @@ const PatientFormScreen = ({ navigation }) => {
                 placeholderTextColor="#9ca3af"
               />
               {errors.age && (
-                <Text style={[styles.errorText, isRTL && styles.rtlText]}>
+                <Text style={[styles.errorText]}>
                   {errors.age}
                 </Text>
               )}
@@ -128,7 +140,7 @@ const PatientFormScreen = ({ navigation }) => {
 
             {/* Sex Selection */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, isRTL && styles.rtlText]}>
+              <Text style={[styles.label]}>
                 {t('patient.sex')}
               </Text>
               <View style={styles.sexContainer}>
@@ -168,7 +180,7 @@ const PatientFormScreen = ({ navigation }) => {
                 </TouchableOpacity>
               </View>
               {errors.sex && (
-                <Text style={[styles.errorText, isRTL && styles.rtlText]}>
+                <Text style={[styles.errorText]}>
                   {errors.sex}
                 </Text>
               )}
@@ -176,7 +188,7 @@ const PatientFormScreen = ({ navigation }) => {
 
             {/* Weight Input */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, isRTL && styles.rtlText]}>
+              <Text style={[styles.label]}>
                 {t('patient.weight')}
               </Text>
               <TextInput
@@ -195,7 +207,7 @@ const PatientFormScreen = ({ navigation }) => {
                 placeholderTextColor="#9ca3af"
               />
               {errors.weight && (
-                <Text style={[styles.errorText, isRTL && styles.rtlText]}>
+                <Text style={[styles.errorText]}>
                   {errors.weight}
                 </Text>
               )}
@@ -203,7 +215,7 @@ const PatientFormScreen = ({ navigation }) => {
 
             {/* Hematocrit Input */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, isRTL && styles.rtlText]}>
+              <Text style={[styles.label]}>
                 {t('patient.hematocrit')}
               </Text>
               <TextInput
@@ -222,7 +234,7 @@ const PatientFormScreen = ({ navigation }) => {
                 placeholderTextColor="#9ca3af"
               />
               {errors.hematocrit && (
-                <Text style={[styles.errorText, isRTL && styles.rtlText]}>
+                <Text style={[styles.errorText]}>
                   {errors.hematocrit}
                 </Text>
               )}
@@ -230,7 +242,7 @@ const PatientFormScreen = ({ navigation }) => {
 
             {/* Hemoglobin Input */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, isRTL && styles.rtlText]}>
+              <Text style={[styles.label]}>
                 {t('patient.hemoglobin')}
               </Text>
               <TextInput
@@ -249,7 +261,7 @@ const PatientFormScreen = ({ navigation }) => {
                 placeholderTextColor="#9ca3af"
               />
               {errors.hemoglobin && (
-                <Text style={[styles.errorText, isRTL && styles.rtlText]}>
+                <Text style={[styles.errorText]}>
                   {errors.hemoglobin}
                 </Text>
               )}
@@ -260,8 +272,18 @@ const PatientFormScreen = ({ navigation }) => {
               onPress={handleSubmit}
               activeOpacity={0.8}
             >
-              <Text style={[styles.submitButtonText, isRTL && styles.rtlText]}>
+              <Text style={[styles.submitButtonText]}>
                 {t('patient.submit')}
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.clearButton}
+              onPress={clearForm}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.clearButtonText]}>
+                {t('patient.clearForm')}
               </Text>
             </TouchableOpacity>
           </View>
@@ -355,6 +377,18 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   submitButtonText: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#ffffff',
+  },
+  clearButton: {
+    backgroundColor: '#ef4444',
+    borderRadius: 8,
+    padding: 16,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  clearButtonText: {
     fontSize: 18,
     fontWeight: '600',
     color: '#ffffff',

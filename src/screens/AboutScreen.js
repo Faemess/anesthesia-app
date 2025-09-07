@@ -20,7 +20,7 @@ const AboutScreen = ({ navigation }) => {
   }, [navigation, t]);
 
   return (
-    <SafeAreaView style={[styles.container, isRTL && styles.rtl]}>
+    <SafeAreaView style={[styles.container]}>
       <ScrollView style={styles.content}>
         <View style={styles.section}>
           <Text style={[styles.title, isRTL && styles.rtlText]}>

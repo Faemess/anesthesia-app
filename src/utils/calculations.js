@@ -62,7 +62,13 @@ export const calculateInductionDoses = (patientData, inductionType) => {
     case 'tiva':
       calculations.propofol = {
         name: 'Propofol',
-        dose: Math.round((weight * (age < 12 ? 3 : 2.5)) * 10) / 10,
+        dose: calculatePropofolDosageInduction(age, weight),
+        unit: 'mg',
+        route: 'IV',
+      };
+      calculations.thiopental = {
+        name: 'Thiopental',
+        dose: calculateThiopentalDosageInduction(age, weight),
         unit: 'mg',
         route: 'IV',
       };
@@ -145,8 +151,8 @@ export const calculateMaintenanceDoses = (patientData, maintenanceType) => {
     case 'tiva':
       calculations.propofolInfusion = {
         name: 'Propofol Infusion',
-        dose: Math.round((weight * (age < 12 ? 200 : 150)) * 10) / 10,
-        unit: 'mcg/kg/min',
+        dose: `${weight*100}-${weight*200}`,
+        unit: 'mcg/min',
         route: 'IV',
       };
       calculations.remifentanil = {
@@ -220,3 +226,44 @@ export const calculateBloodTransfusionNeed = (patientData, bloodLoss) => {
   };
 };
 
+// Updated Propofol Dosage Calculation function
+export function calculatePropofolDosageInduction(age, weight) {
+  let min, max;
+  if (age >= 65) {
+    // For patients older than 60: 1-1.5 mg/kg
+    min = 1 * weight;
+    max = 1.75 * weight;
+    return `${min}-${max}`;
+  } else if (age <= 2) {
+    // For patients younger than 2: 2.5-3.5 mg/kg
+    min = 2.5 * weight;
+    max = 3.5 * weight;
+    return `${min}-${max}`;
+  } else {
+    // For patients between 2 and 60: 1.5-2.5 mg/kg
+    min = 1 * weight;
+    max = 2.5 * weight;
+    return `${min}-${max}`;
+  }
+}
+
+// Updated Thiopental Dosage Calculation function
+export function calculateThiopentalDosageInduction(age, weight) {
+  let min, max;
+  if (age >= 65) {
+    // For patients older than 60: 1-1.5 mg/kg
+    min = 2 * weight;
+    max = 3 * weight;
+    return `${min}-${max}`;
+  } else if (age <= 12) {
+    // For patients younger than 2: 2.5-3.5 mg/kg
+    min = 5 * weight;
+    max = 6 * weight;
+    return `${min}-${max}`;
+  } else {
+    // For patients between 2 and 60: 1.5-2.5 mg/kg
+    min = 3 * weight;
+    max = 5 * weight;
+    return `${min}-${max}`;
+  }
+}
