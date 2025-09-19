@@ -79,22 +79,48 @@ const AppNavigator = () => {
         <Stack.Screen 
           name="PreMedication" 
           component={PreMedicationScreen}
+          options={{
+            headerStyle: { backgroundColor: "#6a46beff" }, // header background
+            headerTintColor: "#fff",                     // text + icons color
+            headerTitleStyle: { fontWeight: "bold" },    // optional text styling
+          }}
         />
         <Stack.Screen 
           name="Induction" 
           component={InductionScreen}
+          options={{
+            headerStyle: { backgroundColor: "#06b6d4" }, // header background
+            headerTintColor: "#fff",                     // text + icons color
+            headerTitleStyle: { fontWeight: "bold" },    // optional text styling
+          }}
         />
         <Stack.Screen 
           name="Maintenance" 
           component={MaintenanceScreen}
+          options={{
+            headerStyle: { backgroundColor: "#10b981" }, // header background
+            headerTintColor: "#fff",                     // text + icons color
+            headerTitleStyle: { fontWeight: "bold" },    // optional text styling
+          }}
         />
         <Stack.Screen 
           name="Recovery" 
           component={RecoveryScreen}
+          options={{
+            headerStyle: { backgroundColor: "#f59e0b" }, // header background
+            headerTintColor: "#fff",                     // text + icons color
+            headerTitleStyle: { fontWeight: "bold" },    // optional text styling
+          }}
         />
         <Stack.Screen 
           name="Emergency" 
           component={EmergencyScreen}
+          options={{
+            title: "Premedication",
+            headerStyle: { backgroundColor: "#ef4444" }, // header background
+            headerTintColor: "#fff",                     // text + icons color
+            headerTitleStyle: { fontWeight: "bold" },    // optional text styling
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
