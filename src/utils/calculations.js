@@ -78,18 +78,15 @@ export const calculateInductionDoses = (patientData, inductionType) => {
         unit: 'mcg',
         route: 'IV',
       };
+      calculations.ketamine = {
+        name: 'Ketamine',
+        dose: `${weight*1}-${weight*2}`,
+        unit: 'mcg',
+        route: 'IV',
+      };
       calculations.rocuronium = {
         name: 'Rocuronium',
         dose: Math.round((weight * 0.6) * 10) / 10,
-        unit: 'mg',
-        route: 'IV',
-      };
-      break;
-
-    case 'general':
-      calculations.thiopental = {
-        name: 'Thiopental',
-        dose: Math.round((weight * (age < 12 ? 6 : 5)) * 10) / 10,
         unit: 'mg',
         route: 'IV',
       };
@@ -100,6 +97,27 @@ export const calculateInductionDoses = (patientData, inductionType) => {
         route: 'IV',
       };
       break;
+
+    case 'inhalational':
+      calculations.n2o = {
+        name: 'N2O',
+        dose: '50-70%',
+        unit: '-',
+        route: 'Lung',
+      };
+      calculations.sevoflurane = {
+        name: 'Sevoflurane',
+        dose: '6-8%',
+        unit: '-',
+        route: 'Lung',
+      };
+      calculations.halothane = {
+        name: 'Halothane',
+        dose: '1-2%',
+        unit: '-',
+        route: 'Lung',
+      };
+    break
 
     case 'spinal':
       calculations.bupivacaine = {
@@ -151,8 +169,8 @@ export const calculateMaintenanceDoses = (patientData, maintenanceType) => {
     case 'tiva':
       calculations.propofolInfusion = {
         name: 'Propofol Infusion',
-        dose: `${weight*100}-${weight*200}`,
-        unit: 'mcg/min',
+        dose: `${weight*100/1000}-${weight*200/1000}`,
+        unit: 'mg/min',
         route: 'IV',
       };
       calculations.remifentanil = {
@@ -163,18 +181,36 @@ export const calculateMaintenanceDoses = (patientData, maintenanceType) => {
       };
       break;
 
-    case 'general':
-      calculations.sevoflurane = {
-        name: 'Sevoflurane',
-        dose: age < 12 ? '2-3' : '1.5-2.5',
-        unit: 'MAC',
+    case 'inhalational':
+      calculations.n2o = {
+        name: 'N2O',
+        dose: '50-70%',
+        unit: '-',
         route: 'Inhalation',
       };
-      calculations.fentanyl = {
-        name: 'Fentanyl',
-        dose: Math.round((weight * 1) * 10) / 10,
-        unit: 'mcg/kg/h',
-        route: 'IV',
+      calculations.sevoflurane = {
+        name: 'Sevoflurane',
+        dose: '1.5-3%',
+        unit: '-',
+        route: 'Inhalation',
+      };
+      calculations.isoflurane = {
+        name: 'Isoflurane',
+        dose: '1-2%',
+        unit: '-',
+        route: 'Inhalation',
+      };
+      calculations.desflurane = {
+        name: 'Desflurane',
+        dose: '4-7%',
+        unit: '-',
+        route: 'Inhalation',
+      };
+      calculations.halothane = {
+        name: 'Halothane',
+        dose: '0.5-1%',
+        unit: '-',
+        route: 'Inhalation',
       };
       break;
 

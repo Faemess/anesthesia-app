@@ -60,8 +60,8 @@ const MaintenanceScreen = ({ navigation }) => {
       icon: '💉',
     },
     {
-      key: 'general',
-      name: 'General',
+      key: 'inhalational',
+      name: 'Inhalational',
       description: 'Inhalational Anesthesia',
       icon: '🫁',
     },

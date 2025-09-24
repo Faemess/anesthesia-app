@@ -48,7 +48,7 @@
     "title": "Induction",
     "tiva": "TIVA (Total Intravenous Anesthesia)",
     "spinal": "Spinal Anesthesia",
-    "general": "General Anesthesia",
+    "inhalational": "Inhalational Anesthesia",
     "equipment": "Required Equipment",
     "endotrachealTube": "Endotracheal Tube Size",
     "laryngoscope": "Laryngoscope Blade"

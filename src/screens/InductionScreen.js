@@ -50,9 +50,9 @@ const InductionScreen = ({ navigation }) => {
       icon: '💉',
     },
     {
-      key: 'general',
-      name: t('induction.general'),
-      description: 'Inhalational + IV',
+      key: 'inhalational',
+      name: t('induction.inhalational'),
+      description: 'Inhalational Anesthetics',
       icon: '🫁',
     },
     {
